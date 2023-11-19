@@ -6,11 +6,11 @@ SELECT  e.emp_no,
 FROM employees as e
     LEFT JOIN salaries as s
     ON (e.emp_no = s.emp_no)
-;	
+;
 
 
-SELECT 	first_name, 
-		last_name, 
+SELECT 	first_name,
+		last_name,
 		hire_date
 FROM employees
 WHERE hire_date LIKE '1986%';
@@ -43,9 +43,9 @@ FROM employees as e
 ;
 
 
-SELECT 	first_name, 
-		last_name, 
-		birth_date, 
+SELECT 	first_name,
+		last_name,
+		birth_date,
 		sex
 FROM employees
 WHERE first_name = 'Hercules' AND last_name LIKE 'B%'
@@ -86,3 +86,11 @@ FROM employees
 GROUP BY last_name
 ORDER BY COUNT(last_name) DESC
 ;
+
+SELECT MAX(LEN(emp_no)) FROM employees;
+SELECT MAX(LEN(emp_title_id)) FROM employees;
+SELECT MAX(LEN(birth_date)) FROM employees;
+SELECT MAX(LEN(first_name)) FROM employees;
+SELECT MAX(LEN(las_name)) FROM employees;
+SELECT MAX(LEN(sex)) FROM employees;
+SELECT MAX(LEN(hire_date)) FROM employees;
